@@ -1,129 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 16px;
-    color: white;
-}
-
-  
- .pt {
-    grid-area: 1 / 1 / 5 / 5;
-    display: flex;
-
-	flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    /* gap: 95px; */
-
-    /* position: absolute; */
-    width: 100%;
-    height: 100%;
-
- }
-
-.form{
-	/* display: flex;
-	flex-direction: column;
-    justify-content: space-between; */
-    display: inline-block;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-padding: 0px;
-gap: 24px;
-
-width: 406px;
-height: 746px;
-
-}
-
-.pt > h1 {
-    width: 125px;
-    height: 96px;
-   margin-right: 300px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 96px;
-
-}
-
-.pt > p {
-    width: 406px;
-    height: 24px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.form > h3 {
-    width: 130px;
-height: 48px;
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 48px;
-}
-
-
-.image {
-    grid-area: 1 / 6 / 5 / 12;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 16px;
+  color: white;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 2fr;
-    background: linear-gradient(180deg, #2E2F36 0%, #17181C 100%);
-    overflow: hidden;
-    max-height: 100%;
+  display: flex;
+  background: linear-gradient(180deg, #2e2f36 0%, #17181c 100%);
+  height: 100vh;
 }
 
+.boxForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 406px;
+  height: 746px;
+}
+
+p > a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.boxForm > h1 {
+  width: 125px;
+  height: 96px;
+  margin-right: 290px;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 96px;
+}
+
+.boxForm > p {
+  width: 406px;
+  height: 24px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form > h3 {
+  width: 130px;
+  height: 48px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("./image/compass_back.jpeg");
+  display: flex;
+}
+
+.image > img {
+  width: 330px;
+  height: 112.95px;
+}
 
 input {
-    border: 2px solid white;
-	border-radius: 46px;
-    box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 46px;
+  box-sizing: border-box;
 
-    background-color: transparent;
-    width: 406px;
-    height: 52px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 19px 24px;
-    margin-top: 10px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    outline: none;
+  background-color: transparent;
+  width: 406px;
+  height: 52px;
+  padding: 19px 24px;
+  margin-top: 10px;
+  outline: none;
+}
 
+input::placeholder {
+  color: white;
 }
 
 button {
-
-    margin-top: 10px;
-    width: 406px;
-    height: 52px;
-
-    background: linear-gradient(180deg, #AD2D14 0%, #F42E07 100%);
-
-
-    border: 1px solid #FE2E05;
-    border-radius: 46px;
+  margin-top: 10px;
+  width: 406px;
+  height: 52px;
+  background: linear-gradient(180deg, #ad2d14 0%, #f42e07 100%);
+  border: 1px solid #fe2e05;
+  border-radius: 46px;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
