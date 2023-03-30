@@ -88,7 +88,8 @@ input {
   height: 52px;
   padding: 19px 24px;
   margin-top: 10px;
-  outline: none;
+  /* outline: none; */
+  display: flex;
 }
 
 input::placeholder {
@@ -106,4 +107,48 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+#name {
+  background-image: url(./image/people.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
+}
+
+#user {
+  background-image: url(./image/digital.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
+}
+#birth {
+  background-image: url(./image/cake.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
+}
+#email {
+  background-image: url(./image/ar.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
+}
+#password {
+  background-image: url(./image/lock.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
+}
+#password_confirm {
+  background-image: url(./image/verify.png);
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: 95%;
 }
