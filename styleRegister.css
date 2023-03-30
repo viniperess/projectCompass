@@ -152,3 +152,13 @@ button:hover {
   justify-content: center;
   background-position: 95%;
 }
+.input-control.error input{
+  border: 1px solid #E9B425;
+}
+
+.input-control.error small {
+  visibility: visible;
+  justify-content: center;
+  display: flex;
+  color: #E9B425;
+}
