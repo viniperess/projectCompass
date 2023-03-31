@@ -9,7 +9,7 @@ const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    check();
+    check(); 
 })
 
 function check(){
@@ -31,11 +31,20 @@ function check(){
     let hasEmptyInput = false;
     let emptyInputId = '';
     
+
     inputs.forEach(function(input){
-        if(input.value.trim() === ''){
+        console.log(input.value.trim());
+        if(!input.value.trim().length){
             hasEmptyInput = true;
             emptyInputId = input.id;
             inputControl = input.parentElement;
+
+            const small = inputControl.querySelector(`#${input.id}~small`);
+            
+            small.innerText = "CAMPO VAZIO";
+
+            inputControl.className = 'input-control error';
+
         }
     })
     // if(nameValue === ''){
@@ -48,17 +57,17 @@ function check(){
     //     errorValidation(inp, "campo vazio")
 
     // }
-    errorValidation(inputControl, "campo vazio");
+    
     
 }
 
 
 
-function errorValidation(input, message){
-    const inputControl = input.parentElement;
-    const small = inputControl.querySelector('small');
+// function errorValidation(input, message){
+//     const inputControl = input.parentElement;
+//     const small = inputControl.querySelector('small');
     
-    small.innerText = message;
+//     small.innerText = message;
 
-    inputControl.className = 'input-control error';
-}
+//     inputControl.className = 'input-control error';
+// }
