@@ -89,9 +89,10 @@ input {
   width: 406px;
   height: 42px;
   padding: 19px 24px;
-  margin-top: 20px;
+  margin-top: 15px;
   /* outline: none; */
   display: flex;
+  margin-bottom: 16px;
 }
 
 input::placeholder {
@@ -99,7 +100,7 @@ input::placeholder {
 }
 
 button {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   width: 406px;
   height: 42px;
   background: linear-gradient(180deg, #ad2d14 0%, #f42e07 100%);
@@ -156,12 +157,14 @@ button:hover {
 }
 .input-control.error input{
   border: 1px solid #E9B425;
-  margin-top: 0;
+margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .input-control.sucess input{
   border: 1px solid green;
-
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 
