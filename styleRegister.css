@@ -183,3 +183,5 @@ margin-bottom: 0px;
   color: #E9B425;
   font-size: 10px;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0;}
