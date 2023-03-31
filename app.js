@@ -45,8 +45,8 @@ function check(){
         } else {
             inputControl = input.parentElement;
             const small = inputControl.querySelector(`#${input.id}~small`);
-            small.innerText = "SUCESS";
-            inputControl.className = "input-control sucess";
+            small.innerText = "SUCCESS";
+            inputControl.className = "input-control success";
         }
     })
     

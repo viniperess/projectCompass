@@ -161,14 +161,14 @@ margin-bottom: 0px;
   margin-top: 0px;
 }
 
-.input-control.sucess input{
+.input-control.success input{
   border: 1px solid green;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
 
-.input-control.sucess small {
+.input-control.success small {
   visibility: visible;
   justify-content: center;
   display: flex;

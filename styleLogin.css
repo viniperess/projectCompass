@@ -60,6 +60,7 @@ p > a {
   font-weight: 400;
   font-size: 32px;
   line-height: 48px;
+  margin-bottom: 20px;
 }
 
 .log {
@@ -93,6 +94,8 @@ input {
   margin-top: 10px;
   /* outline: none; */
   display: flex;
+  margin-top: 15px;
+  margin-bottom: 16px;
 }
 
 input::placeholder {
@@ -100,7 +103,6 @@ input::placeholder {
 }
 
 button {
-  margin-top: 10px;
   width: 406px;
   height: 52px;
   background: linear-gradient(180deg, #ad2d14 0%, #f42e07 100%);
@@ -129,3 +131,32 @@ button:hover {
   background-position: 95%;
 }
 
+
+.input-control.error input{
+  border: 1px solid #E9B425;
+margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.input-control.success input{
+  border: 1px solid green;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+
+.input-control.success small {
+  visibility: visible;
+  justify-content: center;
+  display: flex;
+  color: green;
+  font-size: 10px;
+}
+
+.input-control.error small {
+  visibility: visible;
+  justify-content: center;
+  display: flex;
+  color: #E9B425;
+  font-size: 10px;
+}
