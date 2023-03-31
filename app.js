@@ -40,34 +40,15 @@ function check(){
             inputControl = input.parentElement;
 
             const small = inputControl.querySelector(`#${input.id}~small`);
-            
             small.innerText = "CAMPO VAZIO";
-
             inputControl.className = 'input-control error';
-
+        } else {
+            inputControl = input.parentElement;
+            const small = inputControl.querySelector(`#${input.id}~small`);
+            small.innerText = "SUCESS";
+            inputControl.className = "input-control sucess";
         }
     })
-    // if(nameValue === ''){
-    //     errorValidation(name, "Campo Vazio");
-    // } else {
-
-    // }
-    
-    // if(inp === ''){
-    //     errorValidation(inp, "campo vazio")
-
-    // }
-    
     
 }
 
-
-
-// function errorValidation(input, message){
-//     const inputControl = input.parentElement;
-//     const small = inputControl.querySelector('small');
-    
-//     small.innerText = message;
-
-//     inputControl.className = 'input-control error';
-// }
