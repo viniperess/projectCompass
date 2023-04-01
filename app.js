@@ -3,11 +3,18 @@ const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  check();
+
+  const isValid = check();
+
+  if(isValid){
+    form.submit();
+  }
 });
 
 function check() {
   const inputs = form.querySelectorAll("input");
+
+  let isValid = true;
 
   inputs.forEach(function (input) {
     console.log(input.value.trim());
@@ -15,8 +22,11 @@ function check() {
       inputControl = input.parentElement;
 
       const small = inputControl.querySelector(`#${input.id}~small`);
-      small.innerText = "CAMPO VAZIO";
+      small.innerText = "EMPTY FIELD";
       inputControl.className = "input-control error";
+
+      isValid = false;
+
     } else {
       if (input.id === "email") {
         const emailInput = document.querySelector("#email");
@@ -28,8 +38,9 @@ function check() {
           emailSmall.innerText = "SUCCESS";
           emailControl.className = "input-control success";
         } else {
-          emailSmall.innerText = "E-MAIL INVÁLIDO";
+          emailSmall.innerText = "INVALID EMAIL";
           emailControl.className = "input-control error";
+          isValid = false;
         }
       } else if (input.id === "password") {
         const passwordInput = document.querySelector("#password");
@@ -43,8 +54,9 @@ function check() {
           passwordControl.className = "input-control success";
         } else {
           passwordSmall.innerText =
-            "INVÁLIDA (REQUISITOS: UM CARACTER ESPECIAL, UM MAIUSCULO E UM NUMERO.)";
+            "INVALID (REQUIREMENTS: ONE SPECIAL CHARACTER, CAPITAL LETTER AND NUMBER)";
           passwordControl.className = "input-control error";
+          isValid = false;
         }
       } else if (input.id === "password_confirm") {
         const passwordInput = document.querySelector("#password");
@@ -59,8 +71,9 @@ function check() {
           passwordConfirmSmall.innerText = "SUCCESS";
           passwordConfirmControl.className = "input-control success";
         } else {
-          passwordConfirmSmall.innerText = "SENHAS NÃO COINCIDEM";
+          passwordConfirmSmall.innerText = "PASSWORDS DO NOT MATCH";
           passwordConfirmControl.className = "input-control error";
+          isValid = false;
         }
       } else if (input.id === "name") {
         const nameInput = document.querySelector("#name");
@@ -72,12 +85,13 @@ function check() {
           nameSmall.innerText = "SUCCESS";
           nameControl.className = "input-control success";
         } else {
-          nameSmall.innerText = "NOME INVALIDO";
+          nameSmall.innerText = "INVALID NAME (EX: FULANO DA SILVA)";
           nameControl.className = "input-control error";
+          isValid = false;
         }
       } else if (input.id === "user") {
         const userInput = document.querySelector("#user");
-        const userRegex = /^[a-zA-ZÀ-ÿ]+$/;
+        const userRegex = /^[a-zA-Z]+$/;
         const userControl = userInput.parentElement;
         const userSmall = userControl.querySelector("#user~small");
 
@@ -85,8 +99,9 @@ function check() {
           userSmall.innerText = "SUCCESS";
           userControl.className = "input-control success";
         } else {
-          userSmall.innerText = "USUARIO INVALIDO";
+          userSmall.innerText = "INVALID USER (LETTER ONLY)";
           userControl.className = "input-control error";
+          isValid = false;
         }
       } else if (input.id === "birth") {
         const birthInput = document.querySelector("#birth");
@@ -97,8 +112,9 @@ function check() {
         const currentDate = new Date();
 
         if (currentDate < inputDate) {
-          birthSmall.innerText = "DATA INVALIDA";
+          birthSmall.innerText = "INVALID DATE";
           birthControl.className = "input-control error";
+          isValid = false;
         } else {
           birthSmall.innerText = "SUCCESS";
           birthControl.className = "input-control success";
@@ -108,7 +124,10 @@ function check() {
         const small = inputControl.querySelector(`#${input.id}~small`);
         small.innerText = "SUCCESS";
         inputControl.className = "input-control success";
+        
       }
     }
   });
+
+  return isValid;
 }
