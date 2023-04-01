@@ -10,21 +10,37 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     check(); 
-})
+});
+
+const emails = document.querySelector('#email');
+   
+  emails.addEventListener('input', function() {
+  const emailInput = emails.value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(emails)) {
+
+
+    emailControl = email.parentElement;
+
+    const small = emailControl.querySelector(`#${email.id}~small`);
+    console.log(small,"aqiu");
+
+    small.innerText = "Email errado";
+    emailControl.className = 'input-control error';
+    
+  } else {
+    emailControl = email.parentElement;
+
+    const small = emailControl.querySelector(`#${email.id}~small`);
+    small.innerText = "Email sucess";
+    emailControl.className = 'input-control success';
+    
+  }
+});
+
 
 function check(){
-    // const nameValue = name.value.trim();
-    // const userValue = user.value.trim();
-    // const birthValue = birth.value.trim();
-    // const emailValue = email.value.trim();
-    // const passwordValue = password.value.trim();
-    // const password_confirmValue = password_confirm.value.trim();
-
-    // const vet = {
-    //     name: name.value.trim(), 
-    //     user: user.value.trim(),
-    //     birth: birth.value.trim()
-    // };
 
     const inputs = form.querySelectorAll('input');
     
@@ -43,12 +59,13 @@ function check(){
             small.innerText = "CAMPO VAZIO";
             inputControl.className = 'input-control error';
         } else {
+
             inputControl = input.parentElement;
             const small = inputControl.querySelector(`#${input.id}~small`);
             small.innerText = "SUCCESS";
             inputControl.className = "input-control success";
         }
     })
-    
+
 }
 
