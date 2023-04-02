@@ -19,9 +19,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
-
 }
 
 .form {
@@ -114,7 +113,6 @@ button:hover {
   cursor: pointer;
 }
 
-
 #user {
   background-image: url(./image/people.png);
   background-repeat: no-repeat;
@@ -131,19 +129,17 @@ button:hover {
   background-position: 95%;
 }
 
-
-.input-control.error input{
-  border: 1px solid #E9B425;
-margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-.input-control.success input{
-  border: 1px solid green;
+.input-control.error input {
+  border: 1px solid #e9b425;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
+.input-control.success input {
+  border: 1px solid green;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
 
 .input-control.success small {
   visibility: visible;
@@ -157,6 +153,42 @@ margin-bottom: 0px;
   visibility: visible;
   justify-content: center;
   display: flex;
-  color: #E9B425;
+  color: #e9b425;
   font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  body {
+    display: block;
+    max-width: 100%;
+  }
+  input {
+    width: 50vw;
+    height: 20%;
+  }
+  button {
+    width: 50vw;
+    height: 50px;
+  }
+  .boxForm h1 {
+    font-size: 56px;
+    margin: 0;
+  }
+  .boxForm p {
+    font-size: 12px;
+    width: 50%;
+    margin-bottom: 30px;
+      align-items: center;
+      justify-content: center;
+  }
+  
 }
