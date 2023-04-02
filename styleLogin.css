@@ -181,7 +181,8 @@ button:hover {
   }
   .boxForm h1 {
     font-size: 56px;
-    margin: 0;
+    justify-items: left;
+    display: flex;
   }
   .boxForm p {
     font-size: 12px;

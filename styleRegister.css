@@ -218,7 +218,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   .boxForm h1 {
     font-size: 56px;
-    margin: 0;
+    margin-left: 120px;
   }
   .boxForm h3 {
     margin: 0;
